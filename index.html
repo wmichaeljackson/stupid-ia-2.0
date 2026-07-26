@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>🤖 Stupid IA</title>
+<title>Stupid IA 🤖</title>
 
 <style>
 
@@ -20,6 +19,7 @@ body{
     padding:20px;
 
     background:#1e272e;
+
     color:white;
 
     font-family:"Comic Sans MS",cursive;
@@ -32,12 +32,6 @@ h1{
 
     color:#f1c40f;
     font-size:42px;
-
-}
-
-h2{
-
-    color:#f1c40f;
 
 }
 
@@ -81,7 +75,7 @@ h2{
 
     font-weight:bold;
 
-    transition:.25s;
+    transition:.2s;
 
 }
 
@@ -99,7 +93,7 @@ h2{
 
 .box{
 
-    max-width:720px;
+    max-width:700px;
 
     margin:auto;
 
@@ -159,8 +153,6 @@ input{
 
     font-weight:bold;
 
-    transition:.2s;
-
 }
 
 .main:hover{
@@ -177,45 +169,31 @@ input{
 
     border-left:6px solid #f1c40f;
 
-    border-radius:10px;
-
     padding:25px;
 
-    min-height:90px;
+    border-radius:10px;
 
     font-size:24px;
 
     color:#f1c40f;
 
-    transition:.25s;
+    min-height:90px;
 
 }
 
-.risposta.anim{
+.tag{
 
-    transform:scale(1.03);
+    display:inline-block;
 
-}
+    background:#34495e;
 
-.suggerimenti{
-
-    margin-top:20px;
-
-}
-
-.suggerimenti button{
-
-    background:#3498db;
-
-    color:white;
-
-    border:none;
-
-    padding:10px 15px;
+    padding:8px 14px;
 
     margin:5px;
 
-    border-radius:20px;
+    border-radius:8px;
+
+    border-bottom:3px solid #3498db;
 
     cursor:pointer;
 
@@ -223,7 +201,9 @@ input{
 
 }
 
-.suggerimenti button:hover{
+.tag:hover{
+
+    background:#3498db;
 
     transform:scale(1.08);
 
@@ -239,75 +219,21 @@ input{
 
 }
 
-.tag{
-
-    display:inline-block;
-
-    background:#34495e;
-
-    padding:10px 14px;
-
-    margin:6px;
-
-    border-radius:10px;
-
-    border-bottom:3px solid #3498db;
-
-    cursor:pointer;
-
-    transition:.2s;
-
-    user-select:none;
-
-}
-
-.tag:hover{
-
-    background:#3498db;
-
-    transform:scale(1.08);
-
-}
-
 .github{
 
     display:inline-block;
 
-    margin-top:20px;
-
-    text-decoration:none;
+    background:#24292e;
 
     color:white;
-
-    background:#24292e;
 
     padding:15px 25px;
 
     border-radius:10px;
 
+    text-decoration:none;
+
     font-weight:bold;
-
-}
-
-@media(max-width:700px){
-
-input{
-
-width:100%;
-
-}
-
-.menu button{
-
-width:100%;
-
-}
-
-.box{
-
-padding:20px;
-
-}
 
 }
 
@@ -338,260 +264,256 @@ padding:20px;
 </div>
 <div id="ia" class="box page active">
 
-    <h1>🤖 Stupid IA</h1>
+<h1>🤖 Stupid IA</h1>
 
-    <p>
-        Fai una domanda.
-        Riceverai una risposta totalmente sbagliata,
-        ma detta con assoluta sicurezza.
-    </p>
+<p>
 
-    <input
-        id="domanda"
-        placeholder="Scrivi una domanda...">
+Fai una domanda.
 
-    <br>
+Riceverai una risposta totalmente sbagliata,
 
-    <button
-        class="main"
-        onclick="rispondi()">
+ma detta con assoluta sicurezza.
 
-        Invia alla Stupid IA
+</p>
 
-    </button>
+<input
+id="domanda"
+placeholder="Scrivi una domanda...">
 
-    <h3>Suggerimenti</h3>
+<br>
 
-    <div
-        id="suggerimenti"
-        class="suggerimenti">
+<button
+class="main"
+onclick="rispondi()">
 
-    </div>
+Invia alla Stupid IA
 
-    <div
-        id="risposta"
-        class="risposta">
+</button>
 
-        Sto aspettando una domanda...
+<h3>Suggerimenti</h3>
 
-    </div>
+<div
+id="suggerimenti">
+
+</div>
+
+<div
+id="risposta"
+class="risposta">
+
+Sto aspettando una domanda...
+
+</div>
 
 </div>
 
 
 
-<div id="commenti" class="box page">
+<div
+id="commenti"
+class="box page">
 
-    <h1>💬 Commenta</h1>
+<h1>💬 Commenta</h1>
 
-    <p>
+<p>
 
-        Hai una battuta?
+Vuoi lasciare un consiglio,
 
-        Vuoi suggerire nuove parole?
+una battuta
 
-        Lascia un commento nelle discussioni del progetto.
+o una nuova idea?
 
-    </p>
+</p>
 
-    <a
-        class="github"
-        href="https://github.com/lorenzomignogna2-beep/stupid-ia/discussions/1"
-        target="_blank">
+<a
+class="github"
+href="https://github.com/lorenzomignogna2-beep/stupid-ia/discussions/1"
+target="_blank">
 
-        Apri i commenti su GitHub 💬
+Apri i commenti su GitHub 💬
 
-    </a>
-
-</div>
-
-
-
-<div id="archivio" class="box page">
-
-    <h1>📜 Archivio Segreto</h1>
-
-    <p>
-
-        L'archivio si sblocca automaticamente
-        dopo 5 minuti.
-
-    </p>
-
-    <div
-        class="timer"
-        id="timer">
-
-        05:00
-
-    </div>
-
-    <div
-        id="lista"
-        style="display:none;">
-
-        <h2>
-
-            🔓 Archivio Sbloccato!
-
-        </h2>
-
-        <p>
-
-            Clicca una parola per provarla
-            immediatamente nella Stupid IA.
-
-        </p>
-
-        <div id="parole"></div>
-
-    </div>
+</a>
 
 </div>
 
 
+
+<div
+id="archivio"
+class="box page">
+
+<h1>📜 Archivio Segreto</h1>
+
+<p>
+
+L'archivio si sblocca dopo 5 minuti.
+
+</p>
+
+<div
+class="timer"
+id="timer">
+
+05:00
+
+</div>
+
+<div
+id="lista"
+style="display:none;">
+
+<h2>
+
+🔓 Archivio sbloccato!
+
+</h2>
+
+<p>
+
+Clicca una parola per provarla.
+
+</p>
+
+<div id="parole"></div>
+
+</div>
+
+</div>
 
 <script>
     // ===============================
-// ARCHIVIO SEGRETO + TIMER
+// CAMBIO PAGINE
 // ===============================
 
-const paroleSegrete = [
+function pagina(nome,bottone){
 
-"gatto",
-"cane",
-"dinosauri",
-"america",
-"francia",
-"computer",
-"pizza",
-"spazio",
-"alieni",
-"scuola",
-"calcio",
-"telefono",
-"robot",
-"gelato",
-"mare",
-"fuoco",
-"acqua"
+    document.querySelectorAll(".page")
+        .forEach(p=>p.classList.remove("active"));
+
+    document.getElementById(nome)
+        .classList.add("active");
+
+    document.querySelectorAll(".menu button")
+        .forEach(b=>b.classList.remove("active"));
+
+    bottone.classList.add("active");
+
+}
+
+
+
+// ===============================
+// RISPOSTE
+// ===============================
+
+const risposte={
+
+gatto:[
+"Il gatto fa le fusa perché sta caricando la batteria interna.",
+"I gatti dormono 16 ore perché stanno aggiornando Windows.",
+"Il gatto è un piccolo leone con problemi di WiFi."
+],
+
+cane:[
+"I cani abbaiano perché hanno il mal di gola.",
+"I cani parlano tra loro ma noi sentiamo solo bau.",
+"I cani abbaiano per controllare il volume."
+],
+
+dinosauri:[
+"I dinosauri sono spariti perché hanno perso una gara di nascondino.",
+"Il T-Rex aveva le braccine per risparmiare plastica.",
+"I dinosauri si sono trasferiti su Marte."
+],
+
+america:[
+"L'America era nascosta dietro il divano.",
+"Cristoforo Colombo cercava un supermercato.",
+"L'America è comparsa dopo un aggiornamento."
+],
+
+francia:[
+"La capitale della Francia è Pizza.",
+"Parigi è famosa perché le torri fanno selfie.",
+"La Francia è stata inventata dai francesi."
+],
+
+computer:[
+"Il computer funziona grazie ai piccoli criceti digitali.",
+"La tastiera mangia le lettere durante la notte.",
+"Il mouse vive di formaggio USB."
+]
+
+};
+
+
+
+// ===============================
+// RISPOSTE GENERICHE
+// ===============================
+
+const generiche=[
+
+"Ho consultato 300 scimmie e hanno scelto questa risposta.",
+
+"Secondo gli esperti inesistenti la risposta è banana.",
+
+"Per sicurezza direi pizza.",
+
+"Il frigorifero mi ha confermato tutto.",
+
+"La risposta corretta è nascosta dentro un biscotto della fortuna."
 
 ];
 
-const tempoTotale = 300; // 5 minuti
 
-function aggiornaTimer(){
 
-    let inizio = localStorage.getItem("inizioTimer");
+// ===============================
+// SUGGERIMENTI
+// ===============================
 
-    if(!inizio){
+const suggerimenti=[
 
-        inizio = Date.now();
+"Perché i gatti fanno le fusa?",
 
-        localStorage.setItem("inizioTimer",inizio);
+"Perché i cani abbaiano?",
 
-    }
+"Chi ha scoperto l'America?",
 
-    let passato = Math.floor((Date.now()-inizio)/1000);
+"Perché sono spariti i dinosauri?",
 
-    let rimanente = tempoTotale-passato;
+"Qual è la capitale della Francia?",
 
-    if(rimanente<=0){
+"Come funziona un computer?"
 
-        sbloccaArchivio();
-
-        return;
-
-    }
-
-    let minuti = Math.floor(rimanente/60);
-
-    let secondi = rimanente%60;
-
-    document.getElementById("timer").textContent =
-
-        String(minuti).padStart(2,"0")
-        + ":"
-        + String(secondi).padStart(2,"0");
-
-}
-
-setInterval(aggiornaTimer,1000);
-
-aggiornaTimer();
-
-function sbloccaArchivio(){
-
-    document.getElementById("timer").textContent="🔓 SBLOCCATO!";
-
-    document.getElementById("lista").style.display="block";
-
-    const area=document.getElementById("parole");
-
-    area.innerHTML="";
-
-    paroleSegrete.forEach(parola=>{
-
-        const tag=document.createElement("span");
-
-        tag.className="tag";
-
-        tag.textContent=parola;
-
-        tag.onclick=function(){
-
-            // Torna alla IA
-            document.querySelectorAll(".page")
-                .forEach(x=>x.classList.remove("active"));
-
-            document.getElementById("ia")
-                .classList.add("active");
-
-            document.querySelectorAll(".menu button")
-                .forEach(x=>x.classList.remove("active"));
-
-            document.querySelector(".menu button")
-                .classList.add("active");
-
-            // Inserisce la parola
-            document.getElementById("domanda").value=parola;
-
-            // Risponde automaticamente
-            rispondi();
-
-        };
-
-        area.appendChild(tag);
-
-    });
-
-}
+];
     // ===============================
 // STUPID IA
 // ===============================
 
 function rispondi(){
 
-    const domanda = document
-        .getElementById("domanda")
-        .value
-        .toLowerCase()
-        .trim();
+    const domanda=document
+    .getElementById("domanda")
+    .value
+    .toLowerCase()
+    .trim();
 
-    let risposta = "";
-    let trovata = false;
+    let risposta="";
+    let trovata=false;
 
     for(const parola in risposte){
 
         if(domanda.includes(parola)){
 
-            const lista = risposte[parola];
+            const lista=risposte[parola];
 
-            risposta = lista[
-                Math.floor(Math.random()*lista.length)
+            risposta=
+            lista[
+            Math.floor(Math.random()*lista.length)
             ];
 
-            trovata = true;
+            trovata=true;
 
             break;
 
@@ -601,30 +523,24 @@ function rispondi(){
 
     if(!trovata){
 
-        risposta = generiche[
-            Math.floor(Math.random()*generiche.length)
+        risposta=
+        generiche[
+        Math.floor(Math.random()*generiche.length)
         ];
 
     }
 
-    const box = document.getElementById("risposta");
-
-    box.textContent = "🤖 " + risposta;
-
-    // Animazione
-
-    box.classList.remove("anim");
-
-    void box.offsetWidth;
-
-    box.classList.add("anim");
+    document
+    .getElementById("risposta")
+    .textContent=
+    "🤖 "+risposta;
 
 }
 
 
 
 // ===============================
-// SUGGERIMENTI CASUALI
+// MESCOLA ARRAY
 // ===============================
 
 function mescola(array){
@@ -633,7 +549,8 @@ function mescola(array){
 
         const j=Math.floor(Math.random()*(i+1));
 
-        [array[i],array[j]]=[array[j],array[i]];
+        [array[i],array[j]]=
+        [array[j],array[i]];
 
     }
 
@@ -641,9 +558,14 @@ function mescola(array){
 
 
 
+// ===============================
+// SUGGERIMENTI
+// ===============================
+
 function caricaSuggerimenti(){
 
-    const area=document.getElementById("suggerimenti");
+    const area=
+    document.getElementById("suggerimenti");
 
     area.innerHTML="";
 
@@ -653,25 +575,27 @@ function caricaSuggerimenti(){
 
     for(let i=0;i<3;i++){
 
-        const b=document.createElement("button");
+        const bottone=
+        document.createElement("button");
 
-        b.textContent=lista[i];
+        bottone.textContent=
+        lista[i];
 
-        b.onclick=function(){
+        bottone.onclick=function(){
 
-            document.getElementById("domanda").value=lista[i];
+            document
+            .getElementById("domanda")
+            .value=lista[i];
 
             rispondi();
 
         };
 
-        area.appendChild(b);
+        area.appendChild(bottone);
 
     }
 
 }
-
-
 
 caricaSuggerimenti();
 
@@ -734,9 +658,9 @@ function aggiornaTimer(){
 
     }
 
-    const passato=Math.floor((Date.now()-inizio)/1000);
+    let passato=Math.floor((Date.now()-inizio)/1000);
 
-    const rimanente=tempoTotale-passato;
+    let rimanente=tempoTotale-passato;
 
     if(rimanente<=0){
 
@@ -746,9 +670,9 @@ function aggiornaTimer(){
 
     }
 
-    const minuti=Math.floor(rimanente/60);
+    let minuti=Math.floor(rimanente/60);
 
-    const secondi=rimanente%60;
+    let secondi=rimanente%60;
 
     document.getElementById("timer").textContent=
 
@@ -776,7 +700,7 @@ function sbloccaArchivio(){
 
     area.innerHTML="";
 
-    paroleSegrete.forEach(parola=>{
+    paroleSegrete.forEach(function(parola){
 
         const tag=document.createElement("span");
 
